@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  app1:
+    build:
+      context: ./node
+    environment:
+      - SERVER_ID=1
+      - PORT=15001
+    ports:
+      - "15001:15001"
+  app2:
+    build:
+      context: ./node
+    environment:
+      - SERVER_ID=2
+      - PORT=15002
+    ports:
+      - "15002:15002"
+  app3:
+    build:
+      context: ./node
+    environment:
+      - SERVER_ID=3
+      - PORT=15003
+    ports:
+      - "15003:15003"
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - "18000:80"

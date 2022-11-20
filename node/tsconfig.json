@@ -1,0 +1,43 @@
+{
+    "ts-node": {
+        "transpileOnly": true,
+        "require": []
+    },
+    "compilerOptions": {
+        "baseUrl": ".",
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": [
+            "es2021",
+            "dom"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./target",
+        "plugins": [
+            {
+                "name": "typescript-styled-plugin"
+            },
+            {
+                "name": "ts-sql-plugin",
+                "mock": "0",
+                "cost_pattern": "/\\(cost=\\d+\\.?\\d*\\.\\.(\\d+\\.?\\d*)/",
+                "error_cost": null,
+                "warn_cost": null,
+                "info_cost": null,
+                "schema_command": "pg"
+            }
+        ],
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "target": "es2021"
+    },
+    "include": [
+        "src"
+    ]
+}
