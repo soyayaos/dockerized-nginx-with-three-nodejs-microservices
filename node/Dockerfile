@@ -10,6 +10,4 @@ RUN pnpm i
 
 COPY . ./
 
-EXPOSE 18000
-
 CMD ["pnpm", "start"]
